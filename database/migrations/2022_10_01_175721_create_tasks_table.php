@@ -14,7 +14,10 @@ class CreateTasksTable extends Migration
     {
         Schema::create('tasks', function (Blueprint $table) {
             $table->id();
-            $table->string('name',25)->change();
+            $table->string('name',50)->change();
+            $table->string('date')->unique();
+            $table->string('time')->unique();
+            $table->string('datepicker',25)->change();
             $table->rememberToken();
             $table->timestamps();
         });
