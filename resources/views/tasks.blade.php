@@ -11,7 +11,7 @@
 									@csrf
   <div class="form-group">
     <label for="exampleInputEmail1">Task</label>
-    <input type="text" class="form-control"  name="name" placeholder="Enter Task">
+    <input type="text" class="form-control"  name="name" placeholder="Enter Task" required>
   </div>
  
   <button type="submit" class="btn btn-primary">Add Task</button>
