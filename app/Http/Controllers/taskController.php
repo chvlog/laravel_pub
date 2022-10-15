@@ -8,10 +8,14 @@ class taskController extends Controller
 {
     
  function addTask(Request $req){
-        
+
+
       $tasks=new tasks;
       
       $tasks->name=$req->name;
+       $tasks->date=$req->date;
+        $tasks->time=$req->time;
+         $tasks->datepicker=$req->datepicker;
     
      
       $tasks->save();
