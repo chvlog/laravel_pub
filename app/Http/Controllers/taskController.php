@@ -7,7 +7,7 @@ use App\Models\tasks;
 class taskController extends Controller
 {
     
- function AddTask(Request $req){
+ function addTask(Request $req){
         
       $tasks=new tasks;
       
@@ -19,12 +19,12 @@ class taskController extends Controller
       return redirect('/');
      }
 
- function FatchTask(){
+ function fatchTask(){
         $item = tasks::orderBy('id', 'desc')->take(5)->paginate(10);
         return view('/tasks',['tasks'=>$item]);
   }
 
-  function Delete($id){
+  function delete($id){
         $data=tasks::findOrFail($id);
         $data->delete();
         return redirect('/');   
